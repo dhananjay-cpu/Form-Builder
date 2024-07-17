@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  placeholder: MyString
+  text_transform: MyString
+  default_value: MyString
+  font_size: 1
+  fonr_weight: MyString
+  font_style: MyString
+  color: MyString
+  position: MyString
+  required: MyString
+  disable: MyString
+  resize: MyString
+  form: one
+
+two:
+  text: MyString
+  placeholder: MyString
+  text_transform: MyString
+  default_value: MyString
+  font_size: 1
+  fonr_weight: MyString
+  font_style: MyString
+  color: MyString
+  position: MyString
+  required: MyString
+  disable: MyString
+  resize: MyString
+  form: two
