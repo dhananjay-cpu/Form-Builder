@@ -47,9 +47,9 @@ class FormsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def form_params
       params.require(:form).permit(:title, headers_atttributes: [:text, :text_transform, :font_size, :font_weight, :font_style, :color, :position],
-      inputtexts_attributes: [:text, :placeholder, :text_transform, :defalt_value :font_size, :font_weight, :font_style, :color, :position, :required, :disable], 
-      phones_attributes: [:text, :placeholder, :text_transform, :defalt_value :font_size, :font_weight, :font_style, :color, :position, :required, :disable], 
-      emails_attributes: [:text, :placeholder, :text_transform, :defalt_value :font_size, :font_weight, :font_style, :color, :position, :required, :disable],
+      inputtexts_attributes: [:text, :placeholder, :text_transform, :defalt_value, :font_size, :font_weight, :font_style, :color, :position, :required, :disable], 
+      phones_attributes: [:text, :placeholder, :text_transform, :defalt_value, :font_size, :font_weight, :font_style, :color, :position, :required, :disable], 
+      emails_attributes: [:text, :placeholder, :text_transform, :defalt_value ,:font_size, :font_weight, :font_style, :color, :position, :required, :disable],
       buttons_attributes: [:text, :text_transform, :font_size, :font_weight, :font_style, :color, :background_color, :position, :button_type],
       addresses_attributes: [:text, :placeholder, :text_transform, :defalt_value, :font_size, :font_weight, :font_style, :color, :position, :required, :disable, :resize])
     end
