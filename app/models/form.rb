@@ -17,7 +17,12 @@ class Form < ApplicationRecord
     has_many :addresses, dependent: :destroy
     accepts_nested_attributes_for :addresses
 
+<<<<<<< HEAD
     def self.generate_form_id
         SecureRnadom.hex(16)
+=======
+    before_validation(on: :create) do
+        self.key = Time.now.to_i
+>>>>>>> 6edfa23 (Added Key)
     end
 end

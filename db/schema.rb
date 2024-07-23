@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.2].define(version: 2024_07_09_070019) do
+=======
+ActiveRecord::Schema[7.2].define(version: 2024_07_23_051007) do
+>>>>>>> 6edfa23 (Added Key)
   create_table "addresses", force: :cascade do |t|
     t.string "text", default: "Address"
     t.string "placeholder", default: "Enter your address here"
@@ -68,6 +72,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_07_09_070019) do
     t.string "title", default: "Form Builder"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "key"
+    t.index ["key"], name: "index_forms_on_key", unique: true
   end
 
   create_table "headers", force: :cascade do |t|

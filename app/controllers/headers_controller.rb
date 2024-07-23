@@ -46,6 +46,10 @@ class HeadersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def header_params
+<<<<<<< HEAD
       params.require(:header).permit(:text, :text_transformation, :font_size, :font_width, :font_style, :color, :position)
+=======
+      params.require(:header).permit!
+>>>>>>> 6edfa23 (Added Key)
     end
 end
