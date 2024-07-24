@@ -18,7 +18,7 @@ class FormsController < ApplicationController
     @form = Form.new(form_params)
 
     if @form.save
-      render json: @form.as_json(include: [:headers,  :inputtexts,  :phones,  :emails,  :emails,  :buttons,  :addresses]), status: :created, location: @form
+      render json: @form.as_json(include: [:headers,  :inputtexts,  :phones,  :emails,  :emails,  :buttons,  :addresses]), status: :created
     else
       render json: @form.errors, status: :unprocessable_entity
     end
@@ -26,16 +26,22 @@ class FormsController < ApplicationController
 
   # PATCH/PUT /forms/1
   def update
-    if @form.update(form_params)
-      render json: @form.as_json(include: [:headers,  :inputtexts,  :phones,  :emails,  :emails,  :buttons,  :addresses])
-    else
-      render json: @form.errors, status: :unprocessable_entity
-    end
+    # @user = User.find[params[:id]]
+    # if @user.logged_in?
+      if @form.update(form_params)
+        render json: @form.as_json(include: [:headers,  :inputtexts,  :phones,  :emails,  :emails,  :buttons,  :addresses])
+      else
+        render json: @form.errors, status: :unprocessable_entity
+      end
+    # else
+    #   render json: { message: "Please Sign In"}
+    # end
   end
 
   # DELETE /forms/1
   def destroy
     @form.destroy!
+    render json: { message: "Form has been deleted successfully"}
   end
 
   private
